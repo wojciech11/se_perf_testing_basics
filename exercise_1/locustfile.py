@@ -3,7 +3,7 @@ from locust import HttpUser, between, task
 
 class GhostUser(HttpUser):
     wait_time = between(5, 15)
-    
+
     @task
     def index(self):
         self.client.get("/")
@@ -11,7 +11,7 @@ class GhostUser(HttpUser):
         self.client.get("/author/ghost/")
 
     @task
-    def index(self):
+    def ghost(self):
         self.client.get("/ghost/")
 
     @task

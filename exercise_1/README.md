@@ -46,6 +46,7 @@
    ```
    # najpierw czas na zainstalowanie wymaganych bibliotek
    $ python3 -m venv .venv
+   $ source .venv/bin/activate
    $ pip install locust
 
    # czas zacząć test

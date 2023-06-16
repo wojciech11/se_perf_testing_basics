@@ -4,7 +4,7 @@ import ast
 import time
 
 from collector import get_collector, instrument_requests
-from prometheus_client import CollectorRegistry, generate_latest
+from prometheus_client import generate_latest
 
 
 def add_routes(app, collector):

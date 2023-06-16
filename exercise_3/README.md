@@ -2,13 +2,13 @@
 
 1. Jeśli będziesz potrzebowała w prosty sposób pomierzyć czas wykonania. Przeanalizuj `test_running_time_simple.py`, a następnie wykonaj:
 
-   ```
+   ```bash
    python3 -m unittest test_running_time_simple.py
    ```
 
 2. A co gdy chcemy, aby nas test skończył się w zadanym czasie? A może mamy kod, który może się zablokować? Z pomocą przychodzi biblioteka [pytest-timeout](https://pypi.org/project/pytest-timeout/).
 
-   ```
+   ```bash
    $ python3 -m venv .venv
    $ source .venv/bin/activate
 
@@ -24,23 +24,23 @@
    $ source .venv/bin/activate
    ```
 
-   Przanalizuj plik `test_with_timeout.py`, a następnie wykonaj:
+   Przanalizuj plik `test_measure_time_with_timeout.py`, a następnie wykonaj:
 
-   ```
+   ```bash
    # zauważ marker w teście
-   $ pytest test_with_timeout.py
+   $ pytest test_measure_time_with_timeout.py
    ```
 
    Teraz możemy ustalić również timeout dla każdego testu jednostkowego:
 
-   ```
+   ```bash
    # tutaj podajemy timeout jako argument
    $ pytest --timeout=1 test_running_time_simple.py
    ```
 
 3. Wyobrażmy sobie teraz mamy fragment kodu, który chcemy zrozumieć jak zachowa się dla danych:
 
-   ```
+   ```bash
    $ python with_timeit.py
    ```
 
@@ -58,3 +58,5 @@
               time.sleep(1)
               retry = retry - 1
       ```
+
+   - więcej na [github.com/wojciech11/se_http_api_testing_quickstart](https://github.com/wojciech11/se_http_api_testing_quickstart).

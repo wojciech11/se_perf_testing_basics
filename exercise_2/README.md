@@ -1,6 +1,6 @@
 ## Exercise 2
 
-```
+```bash
 # first terminal
 $ python3 -m venv .venv
 $ source .venv/bin/activate
@@ -8,7 +8,7 @@ $ pip install -r requirements.txt
 $ make start_dev
 ```
 
-```
+```bash
 # second terminal
 $ source .venv/bin/activate
 $ pip install -r test_requirements.txt

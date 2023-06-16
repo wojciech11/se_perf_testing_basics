@@ -1,4 +1,4 @@
-from prometheus_client import Summary, Histogram, generate_latest
+from prometheus_client import Histogram, generate_latest
 from flask import request
 
 STATUS_CODE = "status_code"
@@ -25,7 +25,7 @@ class MetricCollector:
     def newCollector(service_name):
         prefix = service_name.replace("-", "_")
 
-        about_me = Summary(
+        about_me = Histogram(
             prefix + "_duration_seconds",
             service_name + " latency request distribution",
             [PATH, HTTP_METHOD, STATUS_CODE],
@@ -38,7 +38,7 @@ class MetricCollector:
             buckets=(0.1, 0.25, 0.5, 0.75, 0.90, 1.0, 2.5),
         )
 
-        about_her = Summary(
+        about_her = Histogram(
             prefix + "_audit_duration_seconds",
             "audit service latency request distribution",
             [STATUS_CODE],

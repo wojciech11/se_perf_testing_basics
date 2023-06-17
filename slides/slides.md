@@ -431,6 +431,24 @@ source .venv/bin/source
 
 ---
 <!-- _class: lead -->
+### venv
+
+Nie zapomniej o `.gitignore`:
+
+```bash
+cat .gitignore
+```
+
+Powinien zawierać nazwę katalogu, gdzie mamy wirtualne środowisko:
+
+```
+**/.venv
+```
+
+Przykład: [github/Python.gitignore](https://github.com/github/gitignore/blob/main/Python.gitignore)
+
+---
+<!-- _class: lead -->
 ### Zainstaluj locust
 
 ```bash
